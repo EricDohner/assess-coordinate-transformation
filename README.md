@@ -16,4 +16,5 @@ When assessing this problem, I considered three possible solutions. In ascending
 The spherical-Earth approximation presented as too prone to error (up to 0.5% for certain inputs), and Karney's algorithm would have involved a significant time commitment for proper implementation from scratch. Thus, Vincenty's algorithm was chosen.
 
 [1] https://www.tandfonline.com/doi/abs/10.1179/sre.1975.23.176.88 , also available at https://www.ngs.noaa.gov/PUBS_LIB/inverse.pdf
+
 [2] https://arxiv.org/pdf/1109.4448.pdf
