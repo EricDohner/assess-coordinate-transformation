@@ -2,8 +2,6 @@
 #include <math.h>
 #include "GISradar.h"
 
-// int GIS2Radar(double *range, double *bearing, double glonInit, double glatInit, double glonFinal, double glatFinal);
-// int RtoG (double range,  double bearing, double  glonInit, double glatInit, double *glonFinal, double *glatFinal);
 void read_inverse_inputs(double* glonInit, double* glatInit, double* glonFinal, double* glatFinal);
 
 int main(void){
@@ -14,12 +12,8 @@ int main(void){
     double glatFinal;
     double range;
     double bearing;
-    
-    
-    
+
     read_inverse_inputs(&glonInit, &glatInit, &glonFinal, &glatFinal);
-    
-//     printf("Initial/final lat/long: %lf %lf, %lf %lf\n", glatInit, glonInit, glatFinal, glonFinal);
     
     GIS2Radar(&range, &bearing, glonInit, glatInit, glonFinal, glatFinal);
     
@@ -27,7 +21,7 @@ int main(void){
     
     RtoG(range, bearing, glonInit, glatInit, &glonFinal, &glatFinal);
     
-    printf("Test: reversing range and bearing. Should get original lat and long \nglatFinal = %lf deg, glonFinal = %lf deg\n", glatFinal, glonFinal);
+    printf("Test: reversing range and bearing. Should get original lat and lon \nglatFinal = %lf deg, glonFinal = %lf deg\n", glatFinal, glonFinal);
     
     
 }

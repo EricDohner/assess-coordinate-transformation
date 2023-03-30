@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <math.h>
 
+
 const double a = 6378.1370; //a, f, and b are all constants related to the shape of the Earth (WGS84).
 const double f = 1/298.257223563;
 const double b = 6356.752314245;
@@ -20,11 +21,9 @@ int GIS2Radar(double *range, double *bearing, double glonInit, double glatInit, 
     double L = (glonFinal - glonInit)*degtoRads;
     double xx, yy, C;
     
-    int tracker = 0;
+//     int tracker = 0;
     
     lambda = L;
-    
-    printf("%lf\n", lambda);
     
     if(lambda >= M_PI){
      
@@ -63,7 +62,7 @@ int GIS2Radar(double *range, double *bearing, double glonInit, double glatInit, 
         
         lambda_new = L + (1.0 - C)*f*sinalpha*(sigma + C*sinsigma*(cos2sigmam + C*cossigma*(-1.0+ 2.0*pow(cos2sigmam, 2.0))));
         
-        ++tracker;
+//         ++tracker;
         
 //         if(tracker > 100){printf("GIS2radar %d %lf\n", tracker, lambda_new - lambda);}
         
