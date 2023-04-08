@@ -2,7 +2,7 @@
 ERT Assessment Challenge -- coordinate transformation
 
 Use "make" to compile the code. 
-Use "make run" to run the code using the file "GISradartest.exe."
+Use "make run" to run the code using the file "GISradartest.exe," which calls the library "GISradar.c" to perform the conversion and then reverse it.
 
 Initial and final latitude and longitude values are stored in the file "GIS2Rinputs.txt."
 
